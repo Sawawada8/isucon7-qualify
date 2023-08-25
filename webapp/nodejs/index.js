@@ -239,9 +239,9 @@ function getMessage(req, res) {
         p = p.then(() => {
           return pool.query('SELECT name, display_name, avatar_icon FROM user WHERE id = ?', [row.user_id])
             .then(([user]) => {
-              r.user = user
-              r.date = formatDate(row.created_at)
-              r.content = row.content
+              // r.user = user
+              // r.date = formatDate(row.created_at)
+              // r.content = row.content
               response[i] = r
             })
         })
